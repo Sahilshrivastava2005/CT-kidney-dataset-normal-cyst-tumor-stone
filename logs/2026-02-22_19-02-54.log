@@ -1,0 +1,33 @@
+[2026-02-22 19:03:14,533] INFO - ========== APPLICATION STARTED ==========
+[2026-02-22 19:03:14,534] INFO - Processed dataset already exists. Skipping preprocessing.
+[2026-02-22 19:03:14,534] INFO - Loading existing base model...
+[2026-02-22 19:03:18,400] INFO - Starting training pipeline...
+[2026-02-22 19:03:18,401] INFO - ===== TRAINING STARTED =====
+[2026-02-22 19:03:31,698] INFO - Train samples: 9957
+[2026-02-22 19:03:31,708] INFO - Class weights: {0: 0.8339195979899497, 1: 0.6125123031496063, 2: 2.23451526032316, 3: 1.3875418060200668}
+[2026-02-22 19:03:31,708] INFO - Loading existing base model...
+[2026-02-22 19:03:34,065] INFO - Model ready
+[2026-02-22 19:03:34,073] INFO - Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ efficientnetb0 (Functional)          │ (None, 7, 7, 1280)          │       4,049,571 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ global_average_pooling2d             │ (None, 1280)                │               0 │
+│ (GlobalAveragePooling2D)             │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 128)                 │         163,968 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 128)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 4)                   │             516 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 4,214,055 (16.08 MB)
+ Trainable params: 164,484 (642.52 KB)
+ Non-trainable params: 4,049,571 (15.45 MB)
+
+[2026-02-22 19:03:34,197] INFO - Phase 1: Training with frozen base...
+[2026-02-22 19:21:59,770] INFO - Phase 2: Fine-tuning...
+[2026-02-22 19:32:46,180] INFO - Final model saved at: /Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/models/final_model.keras
+[2026-02-22 19:32:46,184] INFO - ===== TRAINING COMPLETED =====
+[2026-02-22 19:32:46,215] INFO - ========== APPLICATION FINISHED SUCCESSFULLY ==========

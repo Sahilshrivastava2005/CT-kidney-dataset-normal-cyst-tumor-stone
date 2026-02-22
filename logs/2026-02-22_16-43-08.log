@@ -1,0 +1,34 @@
+[2026-02-22 16:43:17,260] INFO - ========== APPLICATION STARTED ==========
+[2026-02-22 16:43:17,260] INFO - Processed dataset already exists. Skipping preprocessing.
+[2026-02-22 16:43:17,260] INFO - Loading existing base model...
+[2026-02-22 16:43:18,242] INFO - Starting training pipeline...
+[2026-02-22 16:43:18,242] INFO - ========== TRAINING STARTED ==========
+[2026-02-22 16:43:18,242] INFO - Loading processed dataset...
+[2026-02-22 16:43:18,267] INFO - Dataset shape: (12446, 6)
+[2026-02-22 16:43:18,267] INFO - Columns: ['Unnamed: 0', 'image_id', 'path', 'diag', 'target', 'Class']
+[2026-02-22 16:43:18,285] INFO - Train samples: 9956
+[2026-02-22 16:43:18,285] INFO - Validation samples: 2490
+[2026-02-22 16:43:18,340] INFO - Data loading completed successfully
+[2026-02-22 16:43:18,341] INFO - Data loaded successfully
+[2026-02-22 16:43:18,341] INFO - Loading existing base model...
+[2026-02-22 16:43:18,941] INFO - Model ready
+[2026-02-22 16:43:18,947] INFO - Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ efficientnetb0 (Functional)          │ (None, 7, 7, 1280)          │       4,049,571 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ global_average_pooling2d             │ (None, 1280)                │               0 │
+│ (GlobalAveragePooling2D)             │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 128)                 │         163,968 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 128)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 4)                   │             516 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 4,214,055 (16.08 MB)
+ Trainable params: 164,484 (642.52 KB)
+ Non-trainable params: 4,049,571 (15.45 MB)
+
+[2026-02-22 16:43:18,947] INFO - Computing class weights...

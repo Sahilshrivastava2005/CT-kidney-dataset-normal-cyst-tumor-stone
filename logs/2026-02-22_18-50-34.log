@@ -1,0 +1,33 @@
+[2026-02-22 18:50:43,530] INFO - ========== APPLICATION STARTED ==========
+[2026-02-22 18:50:43,531] INFO - Processed dataset already exists. Skipping preprocessing.
+[2026-02-22 18:50:43,531] INFO - Loading existing base model...
+[2026-02-22 18:50:44,618] INFO - Starting training pipeline...
+[2026-02-22 18:50:44,618] INFO - ===== TRAINING STARTED =====
+[2026-02-22 18:50:44,618] ERROR - Error during training
+Traceback (most recent call last):
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/train.py", line 41, in train
+    train_dataset, val_dataset, y_train = load_data_npy()
+                                          ^^^^^^^^^^^^^^^
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/train.py", line 15, in load_data_npy
+    images = np.load(images_path)  # shape: (N, 224, 224, 3)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 454, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'images.npy'
+[2026-02-22 18:50:44,625] ERROR - Application crashed
+Traceback (most recent call last):
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/main.py", line 36, in main
+    train()
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/train.py", line 117, in train
+    raise e
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/train.py", line 41, in train
+    train_dataset, val_dataset, y_train = load_data_npy()
+                                          ^^^^^^^^^^^^^^^
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/train.py", line 15, in load_data_npy
+    images = np.load(images_path)  # shape: (N, 224, 224, 3)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 454, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'images.npy'

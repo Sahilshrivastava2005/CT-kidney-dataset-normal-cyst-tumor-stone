@@ -1,0 +1,14 @@
+[2026-02-22 17:57:11,312] INFO - ========== APPLICATION STARTED ==========
+[2026-02-22 17:57:11,312] INFO - Processed dataset already exists. Skipping preprocessing.
+[2026-02-22 17:57:11,312] INFO - Loading existing base model...
+[2026-02-22 17:57:12,331] INFO - Starting training pipeline...
+[2026-02-22 17:57:12,331] INFO - ===== TRAINING STARTED =====
+[2026-02-22 17:57:12,331] INFO - Loading processed dataset...
+[2026-02-22 17:57:12,358] INFO - Dataset shape: (12446, 6)
+[2026-02-22 17:57:12,359] INFO - Columns: ['Unnamed: 0', 'image_id', 'path', 'diag', 'target', 'Class']
+[2026-02-22 17:57:12,376] INFO - Train samples: 9956
+[2026-02-22 17:57:12,376] INFO - Validation samples: 2490
+[2026-02-22 17:57:12,445] INFO - Data loading completed successfully
+[2026-02-22 17:57:12,448] INFO - Data loaded
+[2026-02-22 17:57:12,448] INFO - Loading existing base model...
+[2026-02-22 17:57:13,182] INFO - Model ready

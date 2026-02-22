@@ -1,0 +1,90 @@
+[2026-02-22 16:40:41,791] INFO - ========== APPLICATION STARTED ==========
+[2026-02-22 16:40:41,792] INFO - Processed dataset already exists. Skipping preprocessing.
+[2026-02-22 16:40:41,792] INFO - Loading existing base model...
+[2026-02-22 16:40:42,777] INFO - Starting training pipeline...
+[2026-02-22 16:40:42,777] INFO - ========== TRAINING STARTED ==========
+[2026-02-22 16:40:42,777] INFO - Loading processed dataset...
+[2026-02-22 16:40:42,803] INFO - Dataset shape: (12446, 6)
+[2026-02-22 16:40:42,814] ERROR - Error while loading data
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'label'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/data_loader.py", line 107, in load_data
+    class_names = sorted(df["label"].unique())
+                         ~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'label'
+[2026-02-22 16:40:42,820] ERROR - Error during training
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'label'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/train.py", line 29, in train
+    train_dataset, val_dataset, num_classes = load_data()
+                                              ^^^^^^^^^^^
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/data_loader.py", line 144, in load_data
+    raise e
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/data_loader.py", line 107, in load_data
+    class_names = sorted(df["label"].unique())
+                         ~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'label'
+[2026-02-22 16:40:42,821] ERROR - Application crashed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'label'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/main.py", line 36, in main
+    train()
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/train.py", line 142, in train
+    raise e
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/train.py", line 29, in train
+    train_dataset, val_dataset, num_classes = load_data()
+                                              ^^^^^^^^^^^
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/data_loader.py", line 144, in load_data
+    raise e
+  File "/Users/sahilshrivastava/Documents/Potato Disease Classification/my_dl_project/src/data_loader.py", line 107, in load_data
+    class_names = sorted(df["label"].unique())
+                         ~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'label'
